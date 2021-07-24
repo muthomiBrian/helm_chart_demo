@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: application
+metadata:
+  name: nginx-prod
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    helm:
+      valueFiles:
+      - values-prod.yaml
+    path: helm_deploy
+    repoURL: https://github.com/muthomiBrian/helm_chart_demo.git
+    targetRevision: HEAD
