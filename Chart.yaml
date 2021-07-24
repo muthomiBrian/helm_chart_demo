@@ -1,0 +1,10 @@
+apiVersion: v1
+name: nginx-deployment 
+description: Deploy nginx
+keywords:
+- webserver
+- nginx 
+version: 1.0.0
+maintainers:
+- name: brianmuthomi 
+  email: muthomi.bryan@gmail.com
